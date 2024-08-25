@@ -18,9 +18,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '7373711650:AAEfXHtJ34Cxj8HKybR4D2uJHDI_S8uJ5BY'
 MONGO_URI = 'mongodb+srv://Cluster0:Cluster0@cluster0.5mvg9ej.mongodb.net/danger?retryWrites=true&w=majority'
-FORWARD_CHANNEL_ID = -6884410584
-CHANNEL_ID = -6884410584
-error_channel_id = -6884410584
+FORWARD_CHANNEL_ID = -1002177102876
+CHANNEL_ID = -1002177102876
+error_channel_id = -1002177102876
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -192,7 +192,7 @@ def handle_attack_command(message):
 
         bot.send_message(chat_id, "*💣 Ready to launch an attack?*\n"  # Ready to launch message
                                    "*Please provide the target IP, port, and duration in seconds.*\n"  # Provide details message
-                                   "*Example: 167.67.25 6296 60* 🔥\n"  # Example message
+                                   "*Example: 167.67.25 6296 300* 🔥\n"  # Example message
                                    "*Let the chaos begin! 🎉*", parse_mode='Markdown')  # Start chaos message
         bot.register_next_step_handler(message, process_attack_command)
 
